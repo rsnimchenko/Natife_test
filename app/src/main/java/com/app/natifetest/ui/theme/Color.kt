@@ -2,18 +2,16 @@ package com.app.natifetest.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-//Light Theme
-val LightPrimary = Color(0xFFE2EBF4)
-val LightSecondary = Color(0xFF5F5F5F)
-val LightBackground = Color(0xFFFAFAFA)
-val LightSurface = Color(0xFFFFFFFF)
-val LightOnPrimary = Color(0xE53570DF)
-val LightOnSurface = Color(0xFF000000)
+val LightPrimary = Color(0xFFFF6B6B)
+val LightSecondary = Color(0xFF64C9CF)
+val LightBackground = Color(0xFFFDFDFD)
+val LightSurface = Color(0xFFE0E0E0)
+val LightOnPrimary = Color(0xFF333333)
+val LightOnSurface = Color(0xFF666666)
 
-//Dark Theme
-val DarkPrimary = Color(0xFF0E141B)
-val DarkSecondary = Color(0xFF999999)
-val DarkBackground = Color(0xFF000000)
-val DarkSurface = Color(0xFF0E1116)
-val DarkOnPrimary = Color(0xE5316DDE)
-val DarkOnSurface = Color(0xFFFFFFFF)
+val DarkPrimary = Color(0xFFFFA726)
+val DarkSecondary = Color(0xFF00BFA5)
+val DarkBackground = Color(0xFF121212)
+val DarkSurface = Color(0xFF333333)
+val DarkOnPrimary = Color(0xFFFFFFFF)
+val DarkOnSurface = Color(0xFFDDDDDD)

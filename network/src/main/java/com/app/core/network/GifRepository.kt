@@ -23,25 +23,21 @@ class GifRepository(private val client: HttpClient) {
         rating: String = DEFAULT_RATING,
         lang: String = DEFAULT_LANG
     ): List<GifAPIModel> {
-        return try {
-            val response = client.get(
-                HttpRequestBuilder().apply {
-                    url(BASE_URL)
-                    parameter("api_key", API_KEY)
-                    parameter("q", query)
-                    parameter("limit", limit)
-                    parameter("offset", offset)
-                    parameter("rating", rating)
-                    parameter("lang", lang)
-                    parameter("bundle", "messaging_non_clips")
-                }
-            )
-            if (response.status.value == 200) {
-                val fetchModel = response.body<FetchModel>()
-                fetchModel.data
-            } else listOf()
-        } catch (e: Exception) {
-            listOf()
-        }
+        val response = client.get(
+            HttpRequestBuilder().apply {
+                url(BASE_URL)
+                parameter("api_key", API_KEY)
+                parameter("q", query)
+                parameter("limit", limit)
+                parameter("offset", offset)
+                parameter("rating", rating)
+                parameter("lang", lang)
+                parameter("bundle", "messaging_non_clips")
+            }
+        )
+        if (response.status.value == 200) {
+            val fetchModel = response.body<FetchModel>()
+            return fetchModel.data
+        } else throw Exception()
     }
 }

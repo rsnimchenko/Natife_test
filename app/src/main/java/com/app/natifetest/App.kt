@@ -3,6 +3,7 @@ package com.app.natifetest
 import android.app.Application
 import com.app.core.network.networkModule
 import com.app.domain.use_case.useCaseModule
+import com.app.natifetest.ui.list_screen.listVMModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -12,7 +13,7 @@ class App : Application() {
 
         startKoin {
             androidContext(this@App)
-            modules(networkModule, useCaseModule)
+            modules(networkModule, useCaseModule, listVMModule)
         }
     }
 }
